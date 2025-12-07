@@ -47,7 +47,7 @@ for FEED_FILE in "$FEEDS_DIR"/*; do
   if grep -qF "$DOWNLOAD_URL" "$DOWNLOADED_LOG"; then
     echo "  [SKIP] '$EPISODE_TITLE' has already been downloaded."
   else
-    echo "  [NEW] $PODCAST - '$EPISODE_TITLE' is available."
+    echo "  [NEW] $PODCAST_NAME - '$EPISODE_TITLE' is available."
     METADATA=$(printf "%s|%s|%s" "$PODCAST_NAME" "$EPISODE_TITLE" "$DOWNLOAD_URL")
     echo "$METADATA" >>"$PENDING_LIST"
   fi
